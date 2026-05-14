@@ -469,5 +469,7 @@ def get_dashboard_html() -> str:
 
 if __name__ == "__main__":
     import uvicorn
+    import sys
+    sys.path.insert(0, os.path.expanduser('~/Repos/agent-factory/src'))
     app = create_app()
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run(app, host="0.0.0.0", port=8000)
